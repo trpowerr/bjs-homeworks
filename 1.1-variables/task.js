@@ -12,7 +12,7 @@ function averageMark(a, g, p) {
 	let geography = g;
 	let physics = p;
 
-	let result = (a + b + c) / 3;
+	let result = (a + g + p) / 3;
     
 	return result; // ваш ответ;
 }
