@@ -38,6 +38,14 @@ function getAverageMark(marks){
 }
 
 function askDrink(name,dateOfBirthday){
-    // код для задачи №3 писать здесь
-    // return result;
+	// код для задачи №3 писать здесь
+	let result = '';
+  	let yearBirthday = new Date(dateOfBirthday).getFullYear();
+  	let yearNow = new Date().getFullYear();
+  	if ((yearNow - yearBirthday) < 18) {
+    	result = `Сожалею, ${name}, но я не могу вам продать алкоголь. Зато могу предложить вам замечательный клюквенный компот!`
+  	} else {
+    	result = `Не желаете ли олд-фэшн, ${name}?`
+  	}
+    return result;
 }
