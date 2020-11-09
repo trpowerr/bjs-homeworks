@@ -43,13 +43,10 @@ function getAverageScore(data) {
 
 function getAverageMark(marks) {
 	let averageMark = 0
-	if (marks.length === 0) {
-		return 0;
-	}
 	for (let value of marks) {
 		averageMark += value;
 	}
-	return averageMark / marks.length
+	return averageMark / marks.length || 0
 }
 
 // Задача 3
