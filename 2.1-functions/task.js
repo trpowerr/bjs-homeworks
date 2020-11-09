@@ -29,5 +29,37 @@ function showSolutionsMessage(a, b, c) {
 
 }
 
-
 // Задача 2
+
+function getAverageScore(data) {
+	let averageMarkArr = [];
+	for (let value in data) {
+		data[value] = getAverageMark(data[value]);
+		averageMarkArr.push(data[value]);
+	}
+	data.average = getAverageMark(averageMarkArr);
+	return data
+}
+
+function getAverageMark(marks) {
+	let averageMark = 0
+	if (marks.length === 0) {
+		return 0;
+	}
+	for (let value of marks) {
+		averageMark += value;
+	}
+	return averageMark / marks.length
+}
+
+console.log(getAverageScore({
+	algebra:[2, 4, 5, 2, 3, 4],
+	geometry:[2, 4, 5],
+	russian:[3, 3, 4, 5],
+	physics:[5, 5],
+	music:[2, 2, 5],
+	english:[4, 4, 3],
+	poetry:[5, 3, 4],
+	chemistry:[2],
+	french:[4,4],
+}))
