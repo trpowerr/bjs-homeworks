@@ -52,14 +52,15 @@ function getAverageMark(marks) {
 	return averageMark / marks.length
 }
 
-console.log(getAverageScore({
-	algebra:[2, 4, 5, 2, 3, 4],
-	geometry:[2, 4, 5],
-	russian:[3, 3, 4, 5],
-	physics:[5, 5],
-	music:[2, 2, 5],
-	english:[4, 4, 3],
-	poetry:[5, 3, 4],
-	chemistry:[2],
-	french:[4,4],
-}))
+// Задача 3
+
+function getPersonData(secretData) {
+	return {
+		firstName: getDecodedValue(secretData.aaa),
+		lastName: getDecodedValue(secretData.bbb)
+	}
+}
+
+function getDecodedValue(secret) {
+	return (secret === 0) ? 'Родриго' : 'Эмильо';
+}
