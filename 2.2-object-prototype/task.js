@@ -10,6 +10,7 @@ String.prototype.isPalindrome = function () {
   }
 }
 
+//Задача 2
 
 function getAverageMark(marks) {
   let average = 0; 
@@ -21,8 +22,15 @@ function getAverageMark(marks) {
   return roundedAverage || 0;
 }
 
+//Задача 3
 
 function checkBirthday(birthday) {
-    // код для задачи №3 писать здесь
-    // return verdict
+    let now = Date.now();
+    birthday = new Date(birthday)
+    let diff = now - (+birthday);
+    let age = diff / 31556952000;
+    
+
+    return age > 18;
 }
+
