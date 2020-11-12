@@ -12,9 +12,15 @@ String.prototype.isPalindrome = function () {
 
 
 function getAverageMark(marks) {
-    // код для задачи №2 писать здесь
-    // return averageMark
+  let average = 0; 
+  for (let value of marks) {
+    average += value;
+  }
+  average = average / marks.length;
+  const roundedAverage = Math.round(average);
+  return roundedAverage || 0;
 }
+
 
 function checkBirthday(birthday) {
     // код для задачи №3 писать здесь
