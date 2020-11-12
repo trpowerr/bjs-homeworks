@@ -13,8 +13,7 @@ function getAverageMark(marks) {
   for (let value of marks) {
     average += value;
   }
-  average = average / marks.length;
-  const roundedAverage = Math.round(average);
+  const roundedAverage = Math.round(average / marks.length);
   return roundedAverage || 0;
 }
 
